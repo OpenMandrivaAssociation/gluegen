@@ -14,6 +14,7 @@ BuildRequires:	jpackage-utils
 BuildRequires:	java-rpmbuild
 BuildRequires:	update-alternatives
 BuildRequires:	xml-commons-apis
+BuildRequires:	cpptasks
 Requires:	java >= 1.5
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
