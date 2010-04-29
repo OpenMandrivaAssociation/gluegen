@@ -1,7 +1,7 @@
 Summary:	Java/JNI glue code generator to call out to ANSI C
 Name:		gluegen
 Version:	1.0b06
-Release:	%mkrel 0.0.3
+Release:	%mkrel 0.0.4
 Group:		Development/Java
 License:	BSD
 URL:		https://gluegen.dev.java.net/
