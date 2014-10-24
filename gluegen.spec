@@ -11,6 +11,7 @@ BuildRequires:	ant
 BuildRequires:	ant-antlr
 BuildRequires:	antlr
 BuildRequires:	jpackage-utils
+BuildRequires:	java-devel
 BuildRequires:	java-rpmbuild
 BuildRequires:	update-alternatives
 BuildRequires:	xml-commons-apis
