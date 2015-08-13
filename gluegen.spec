@@ -1,3 +1,4 @@
+%define debug_package %{nil}
 Summary:	Java/JNI glue code generator to call out to ANSI C
 Name:		gluegen
 Version:	1.0b06
@@ -7,6 +8,7 @@ License:	BSD
 URL:		https://gluegen.dev.java.net/
 # svn co https://svn.java.net/svn/gluegen~svn/branches/1.0b06-maint gluegen-1.0b06
 Source0:	%{name}-%{version}.tar.bz2
+Patch1:		gluegen-1.0b06-fix-antlr-classpath.patch
 BuildRequires:	ant
 BuildRequires:	ant-antlr
 BuildRequires:	antlr
@@ -48,12 +50,14 @@ Usermanual for %{name}.
 
 %prep
 %setup -q
+%apply_patches
+rm -rf $(find doc -type d -name .svn | xargs)
 
 %build
 export CLASSPATH=$(build-classpath antlr ant/ant-antlr)
 
 pushd make
-%ant all
+%ant -Dantlr.jar=$(build-classpath antlr) all
 popd
 
 %install
