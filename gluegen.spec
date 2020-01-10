@@ -50,7 +50,7 @@ Usermanual for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 rm -rf $(find doc -type d -name .svn | xargs)
 
 %build
